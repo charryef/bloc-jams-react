@@ -102,6 +102,7 @@ class Album extends Component {
     const seconds = (((time % 60) < 10) ? ( "0" + Math.floor(time % 60)) : (Math.floor(time % 60)));
     const newTime = minutes + ':' + seconds;
     return newTime;
+
     }
   }
 
@@ -141,7 +142,7 @@ class Album extends Component {
                     </button>
                   </td>
                   <td className="song-title">{song.title}</td>
-                  <td className="song-duration">{song.duration}</td>
+                  <td className="song-duration">{this.formatTime(song.duration)}</td>
                 </tr>
               )
             }
@@ -149,9 +150,11 @@ class Album extends Component {
         </table>
         <PlayerBar
           isPlaying={this.state.isPlaying}
+          formattedTime={this.formatTime(this.audioElement.currentTime)}
+          formattedDuration={this.formatTime(this.audioElement.duration)}
           currentSong={this.state.currentSong}
-          currentTime={this.formatTime(this.audioElement.currentTime)}
-          duration={this.formatTime(this.audioElement.duration)}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
           volume={this.audioElement.volume}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
