@@ -1,0 +1,30 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 25px;
+}
+
+.library {
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.album-info {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 20px;
+  color: #f3e5f5;
+}
+
+.artist-info {
+  padding-top: 7px;
+}
+
+.songs-length-info {
+  padding-top: 7px;
+}

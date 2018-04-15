@@ -1,0 +1,7 @@
+#album-cover-art {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 25px;
+}
